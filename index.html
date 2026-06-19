@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Weather Dashboard</h1>
+
+      <form id="weather-form" class="search-box">
+        <input id="city-input" type="text" placeholder="Enter city name" />
+        <button id="search-button" type="submit">Search</button>
+      </form>
+
+      <p id="loading" class="loading hidden">Loading weather data...</p>
+      <p id="message" class="message">Search for a city to see the weather.</p>
+
+      <section class="card weather-card">
+        <div id="icon-box" class="weather-icon">--</div>
+        <h2 id="city-name">City Name</h2>
+        <p id="weather-description">Weather description will appear here.</p>
+
+        <div class="details">
+          <div>
+            <span>Temperature</span>
+            <strong id="temperature">--°C</strong>
+          </div>
+          <div>
+            <span>Humidity</span>
+            <strong id="humidity">--%</strong>
+          </div>
+          <div>
+            <span>Wind Speed</span>
+            <strong id="wind-speed">-- m/s</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="advisory-card" class="card advisory-card">
+        <div id="advisory-icon" class="advisory-icon">☀️</div>
+        <div>
+          <h2>Weather Advisory</h2>
+          <p id="advisory-text">Search for a city to get a forecast-based advisory.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
